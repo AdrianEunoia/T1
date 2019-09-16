@@ -1,4 +1,5 @@
-import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Ejercicio3 {
@@ -6,6 +7,9 @@ public class Ejercicio3 {
         Scanner scanner = new Scanner(System.in);
         int vecesJugadas=0;
         boolean inicioJuego=true;
+        // Declaracion de arraylist
+        ArrayList<String> arrayNombres = new ArrayList<String>();
+        ArrayList<Integer> arryaPuntuaciones = new ArrayList<Integer>();
         // Bucle partida
         while (inicioJuego){
             vecesJugadas++;
@@ -26,6 +30,19 @@ public class Ejercicio3 {
                     intentos++;
                     System.out.printf("Número Acertado, has utilizado %d intentos %s \n",intentos,nombreJugador);
                     adivinado=false;
+                    arrayNombres.add(nombreJugador);
+                    arryaPuntuaciones.add(intentos);
+                    ArrayList<Integer> numerosOriginal = (ArrayList<Integer>) arryaPuntuaciones.clone();
+                    Collections.sort(arryaPuntuaciones);
+                    int mayorResultado = arryaPuntuaciones.get(0);
+                    int indexMasFavorable = (numerosOriginal.indexOf(mayorResultado));
+                    String nombreRecord = arrayNombres.get(indexMasFavorable);
+                    if (intentos <= mayorResultado) {
+                        System.out.printf("Enhorabuena acabas de batir un record con %d intentos\n %s",mayorResultado,nombreJugador);
+                    }
+                    else if (intentos > mayorResultado) {
+                        System.out.printf("Lo sentimos el record actual lo tiene %s con %d intentos\n",nombreRecord,mayorResultado);
+                    }
                 }
                 else{
                     intentos++;
@@ -34,19 +51,20 @@ public class Ejercicio3 {
             }
             // Vacio buffer
             scanner.nextLine();
-            //
+            // Pregunto si volvemos a jugar
             System.out.printf("¿Desea jugar de nuevo? Si/No: ");
             String repetir = scanner.nextLine();
             if (repetir.equals("Si")){
                 System.out.println("#####################");
                 System.out.println("Cargando nuevo Juego");
                 System.out.println("#####################");
-                System.out.printf("Se han jugado %d veces",vecesJugadas);
+                System.out.printf("Se han jugado %d veces\n",vecesJugadas);
             }
-            else{
-                System.out.printf("Se han jugado %d veces",vecesJugadas);
-                inicioJuego=false;
+            else {
+                System.out.printf("Se han jugado %d veces\n", vecesJugadas);
+                inicioJuego = false;
             }
         }
     }
+
 }
