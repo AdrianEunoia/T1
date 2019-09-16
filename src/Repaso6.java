@@ -6,7 +6,5 @@ public class Repaso6 {
         listaElementos.add(4);
         listaElementos.add(3);
         System.out.println(listaElementos.indexOf(3));
-
-
     }
 }

@@ -4,6 +4,7 @@ import utiles.Alumno;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Enumeration;
 import java.util.Hashtable;
 
 public class Repaso5 {
@@ -47,5 +48,30 @@ public class Repaso5 {
         // Hashtables
         // Son el mismo concepto que arraylist pero diferentes
         Hashtable<String, Alumno> listaAlumno = new Hashtable();
+        // Añadir
+            // Primera forma, no recomendable
+        listaAlumno.put("123456789P",new Alumno("Pepe","Pepe","123456789P",123));
+            // Segunda forma, recomendable
+        Alumno a = new Alumno("Juan","Juan","123F",123);
+        listaAlumno.put(a.getDni(),a);
+        // Eliminar
+        listaAlumno.remove("123F");
+        // Comprobar si contiene
+        listaAlumno.containsKey("123F");
+        // Recoger todo el objeto a partir de su key
+        Alumno alumnoEncontrado = listaAlumno.get("123F");
+        // Sacar todos los elementos del objeto
+        Enumeration<Alumno> alumnos = listaAlumno.elements();
+        while (alumnos.hasMoreElements()){
+            Alumno alumno = alumnos.nextElement();
+            System.out.println(alumno.getNombre());
+        }
+        // Segunda forma
+        Enumeration<Alumno> claves = listaAlumno.elements();
+        while (claves.hasMoreElements()){
+            Alumno alumnoDos = listaAlumno.get(claves.nextElement());
+            System.out.println(alumnoDos.getNombre());
+            System.out.println(listaAlumno.get(claves.nextElement()).toString());
+        }
     }
 }
