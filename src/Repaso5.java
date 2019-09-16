@@ -58,7 +58,7 @@ public class Repaso5 {
         listaAlumno.remove("123F");
         // Comprobar si contiene
         listaAlumno.containsKey("123F");
-        // Recoger todo el objeto a partir de su key
+        // Recoger el objeto a partir de su key
         Alumno alumnoEncontrado = listaAlumno.get("123F");
         // Sacar todos los elementos del objeto
         Enumeration<Alumno> alumnos = listaAlumno.elements();

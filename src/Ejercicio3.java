@@ -30,12 +30,19 @@ public class Ejercicio3 {
                     intentos++;
                     System.out.printf("Número Acertado, has utilizado %d intentos %s \n",intentos,nombreJugador);
                     adivinado=false;
+                    // Añado jugador a la arraylist
                     arrayNombres.add(nombreJugador);
+                    // Añado jugador a la arraylist
                     arryaPuntuaciones.add(intentos);
+                    // Copio arraylist antes de ordenarla
                     ArrayList<Integer> numerosOriginal = (ArrayList<Integer>) arryaPuntuaciones.clone();
+                    // Ordeno arraylist
                     Collections.sort(arryaPuntuaciones);
+                    // Me quedo con la posicion inicial despues de ordenar, que sera la mas baja, la mejor
                     int mayorResultado = arryaPuntuaciones.get(0);
+                    // De esa posicion busco el indice que era desde el array copiado no ordenado
                     int indexMasFavorable = (numerosOriginal.indexOf(mayorResultado));
+                    // Con el indice del record busco el nombre del jugador
                     String nombreRecord = arrayNombres.get(indexMasFavorable);
                     if (intentos <= mayorResultado) {
                         System.out.printf("Enhorabuena acabas de batir un record con %d intentos\n %s",mayorResultado,nombreJugador);
