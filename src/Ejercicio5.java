@@ -91,6 +91,7 @@ public class Ejercicio5 {
                     }
                     break;
                 case 5:
+                    // Enumerar coches que esten en el garaje
                     Enumeration<Coche> alumnos = hastableCoches.elements();
                     while (alumnos.hasMoreElements()) {
                         Coche coche = alumnos.nextElement();
