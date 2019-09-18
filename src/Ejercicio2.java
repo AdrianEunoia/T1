@@ -14,6 +14,7 @@ public class Ejercicio2 {
             System.out.println("Opcion 4 Vaciar el array");
             System.out.println("Opcion 5 Salir del menu");
             // Recojo opcion
+            System.out.printf("Opción: ");
             opcion = scanner.nextInt();
             switch (opcion){
                 case 1:
