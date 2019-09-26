@@ -1,4 +1,4 @@
-public class Repaso4 {
+public class Repaso4_ArrayMultidimensional {
     public static void main(String[] args) {
         Object[][] multidimensional = new Object[2][2];
         multidimensional[0][0] = "Juan";

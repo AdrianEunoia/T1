@@ -1,4 +1,4 @@
-public class Repaso
+public class Repaso1_Menu
 {
     public static void main(String[] args) {
         boolean salida;

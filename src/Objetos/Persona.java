@@ -1,4 +1,4 @@
-package utiles;
+package Objetos;
 
 public class Persona {
     String nombre, apellido, dni;

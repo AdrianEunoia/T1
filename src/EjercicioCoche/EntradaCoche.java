@@ -1,4 +1,4 @@
-package clases;
+package EjercicioCoche;
 
 public class EntradaCoche {
     public static void main(String[] args) {

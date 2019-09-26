@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Repaso3 {
+public class Repaso3_ArrayMultidimensional {
     public static void main(String[] args) {
         Object[][] multidimensionalCuatro = {{"adri",4},{"jose",18},{"carlos",12}};
         int totalArray=0;

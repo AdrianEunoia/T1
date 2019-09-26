@@ -1,4 +1,4 @@
-package clases;
+package EjercicioCoche;
 
 public class Coche {
     /*// Constructor, como minimo hay uno, este está vacio

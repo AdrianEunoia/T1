@@ -1,4 +1,4 @@
-public class Repaso2 {
+public class Repaso2_ArraySimple {
     public static void main(String[] args) {
         // Hay dos posibilidades de iniciar un array
         int[] numeros = {1,2,3,4};

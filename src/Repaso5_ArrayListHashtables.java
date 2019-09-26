@@ -1,13 +1,11 @@
-import com.sun.corba.se.spi.ior.ObjectKey;
-import utiles.Alumno;
+import Objetos.Alumno;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
-public class Repaso5 {
+public class Repaso5_ArrayListHashtables {
     public static void main(String[] args) {
         // Array antigua
         int [] elementos = new int[7];

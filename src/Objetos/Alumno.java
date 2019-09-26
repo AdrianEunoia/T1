@@ -1,4 +1,4 @@
-package utiles;
+package Objetos;
 
 public class Alumno {
     // Hacemos privadas las cualidades del objeto para que no pueda acceder otro

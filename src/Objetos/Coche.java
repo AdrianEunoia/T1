@@ -1,4 +1,4 @@
-package utiles;
+package Objetos;
 
 public class Coche {
     private String marca, modelo, matricula;
@@ -12,6 +12,7 @@ public class Coche {
         this.bastidor = bastidor;
         this.cv = cv;
         this.estado = estado;
+        this.velocidad = 0;
     }
     // Setters
     public void setMarca(String marca) { this.marca = marca; }
@@ -47,5 +48,17 @@ public class Coche {
             this.velocidad = this.velocidad - velocidad;
         }
     }
-
+    // toString
+    @Override
+    public String toString() {
+        return "Coche{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", matricula='" + matricula + '\'' +
+                ", bastidor=" + bastidor +
+                ", cv=" + cv +
+                ", velocidad=" + velocidad +
+                ", estado=" + estado +
+                '}';
+    }
 }

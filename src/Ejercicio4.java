@@ -1,7 +1,7 @@
 import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Scanner;
-import utiles.Persona;
+import Objetos.Persona;
 
 public class Ejercicio4 {
     public static void main(String[] args) {

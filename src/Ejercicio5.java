@@ -2,9 +2,7 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Scanner;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-import utiles.Alumno;
-import utiles.Coche;
+import Objetos.Coche;
 
 public class Ejercicio5 {
     public static void main(String[] args) {
